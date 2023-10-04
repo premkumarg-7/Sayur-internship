@@ -1,0 +1,44 @@
+Pseudocode for Instagram_Post
+
+Class InstagramPost{
+
+    Private String username;
+    Private String imageUrl;
+    Private String caption;
+    Private ArrayList<String> hashtags;
+    Private int likes;
+    Private ArrayList<String> comments;
+
+    Public InstagramPost(String username, String imageUrl, String caption){
+        this.username = username;
+        this.imageUrl = imageUrl;
+        this.caption = caption;
+        this.hashtags = [];
+        this.likes = 0;
+        this.comments = [];
+}
+
+    Public void addHashtag(String hashtag){
+        this.hashtags.add(hashtag);
+}
+
+    Public void likePost(){
+        this.likes++;
+}
+
+    Public void addComment(String comment){
+        this.comments.add(comment);
+}
+
+    Public String getDetails(){
+        Return "Username: " + this.username +
+               "\n"+"Image URL: " + this.imageUrl +
+               "\n"+"Caption: " + this.caption +
+               "\n"+"Likes: " + this.likes;
+}
+
+    Public List<String> getComments(){
+        Return this.comments
+	}
+}
+End Class
