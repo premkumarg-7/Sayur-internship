@@ -1,0 +1,51 @@
+package sayur_tech;
+
+import java.awt.MenuItem;
+import java.awt.event.ItemEvent;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class restaurant {
+	
+		private String name;
+		private String area;
+		private float rating;
+		private List<String> menu;
+		
+		
+		public restaurant(String name,String area,double d) {
+			this.name=name;
+			this.area=area;
+			this.rating=d;
+			this.menu=new ArrayList<>();
+		}
+		
+		public String getName() {
+			return name;
+		}
+		public String getArea() {
+			return area;
+		}
+		public float getRating() {
+			return rating;
+		}
+		public void setRating(float rating) {
+			this.rating=rating;
+		}
+		
+		private void menu(String item, double price) {
+			// TODO Auto-generated method stub
+			menu.add(item,price);
+		}
+		
+		public void displayItem() {
+			System.out.println("Item :"+menu.get(item)+"Price :"+menu.get(price));
+		}
+		
+		
+		public static void main(String[] args) {
+			restaurant Aaryabhavan = new restaurant("prem", "madurai", 5.0);
+		}
+}
