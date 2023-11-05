@@ -4,14 +4,16 @@ public class Main
 		String[] name=new String[]{"Prem","Kesavan","Jeroban","Dinesh"};
 		int[] marks=new int[]{80,89,43,55};
 		int n= marks.length;
+		int count =0;
+		int pass=50;
 		for (int i=0;i<n;i++){
-		    if(marks[i]>50){
-		        System.out.println("Pass");
-		        System.out.println(name[i]+":"+marks[i]);
+		    if(marks[i]>pass){
+		        System.out.print(name[i]+":"+marks[i]);
+			    System.out.println("Pass");
 		    }else{
-		        System.out.println("Fail");
-		         System.out.println(name[i]+":"+marks[i]);
+		        count++;
 		    }
-		} 
+		}
+			System.output.println("Failed students:"+count);
 	}
 }
