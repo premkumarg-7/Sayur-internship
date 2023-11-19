@@ -1,5 +1,10 @@
-import java.util.*;
-public class Main
+/*
+ * There are two arrays of numbers. the numbers are sorted in ascending order. 
+Find the numbers that are common in both arrays. 
+Eg - array 1 = [1,3,7,9,13,14], array2 [1,2,7,13,15]. answer - [1,7,13]
+ */
+
+public class program4
 {
   public static void main (String[]args)
   {

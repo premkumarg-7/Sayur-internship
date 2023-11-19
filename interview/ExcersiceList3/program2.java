@@ -1,5 +1,12 @@
+/*
+ * You have a message that you want to send to your friend. You don't want others to see the message. You code the message and send it.
+The alg to code is - split each word in half and reverse it (eg cricket becomes ketccri), if the word ends with a vowel, split at the 
+last letter and reverse (eg cinema becomes acinem), if the word has numbers, spell the number but add A as first and last letters
+ (8 pm becomes AeightA pm ).
+ Write an app that can code and decode the message.
+ */
 import java.util.*;
-public class Main
+public class program2
 {
   public static void main (String[]args)
   {

@@ -1,5 +1,9 @@
+/*
+ * Write a function to calculate compund interest. Help the user save money by displaying the interest they 
+can earn by saving certain % of thier salary, for 3 different interest rates and for 3 different % of salary
+ */
 import java.util.*;
-public class Main
+public class program1
 {
 	public static void main(String[] args) {
 
@@ -7,9 +11,7 @@ CompoundInterest();
   }
     public static void CompoundInterest(){
 		double salary=0.0;
-		double percentage=0.0;
-		double amount=0;
-		double interest=0.0;
+		
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the salary :");
