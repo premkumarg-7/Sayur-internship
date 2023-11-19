@@ -1,9 +1,17 @@
-package sayur_tech;
+/*
+ * In your college Python is taught in 3 different departments by the same professor. 
+For each dept, get the no of students studying Python and their marks in the final exam 
+Get the input as comma seperated string
 
+Find the top 3 marks in each class
+Find the top 3 marks if all classes are combined.
+Find the avg mark of students with passing mark in each class and the classes combined.
+Find which class has the best average mark and least number of failed students.
+ */
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Python_Professor {
+public class program5 {
   public static void main(String[] args) {
 	  //get inputs marks in each department
     int[] deptA = getDeptMarks("A");
@@ -25,6 +33,9 @@ public class Python_Professor {
     
     //find the average marks in whole class
     whole_avg(deptA, deptB, deptC);
+
+	//find the best average class
+	best_avg(deptA, deptB, deptC);
   }
 
   private static int[] getDeptMarks(String deptName) {
@@ -34,12 +45,12 @@ public class Python_Professor {
     int[] marks = new int[n];
 
     System.out.println("Enter their marks separated by commas:");
-    String input = sc.next();
-    String[] values = input.split(",");
+    String input = sc.next(); // get the marks form user
+    String[] values = input.split(","); //split the marks by , comma
 
     for (int i = 0; i < n; i++) {
       try {
-        marks[i] = Integer.parseInt(values[i]);
+        marks[i] = Integer.parseInt(values[i]); //typecasting the String values into marks integer
       } catch (Exception e) {
         System.out.println(e);
       }
@@ -49,17 +60,19 @@ public class Python_Professor {
     return marks;
   }
   
+  //find the topmark in class method
   private static void topmarks(int[] array,String str) {
-	  Arrays.sort(array);
+	  Arrays.sort(array); // sort the marks in ascendig order
 	  int marks=array.length-1;
 	  System.out.print("Dept of "+str+" Top marks :");
 	  for(int i=0;i<3;i++) {
-		  System.out.print(array[marks--]+", ");
+		  System.out.print(array[marks--]+", "); //print the last 3marks since it is a top marks of the class
 	  }
 	  System.out.println();
 	  System.out.println("----------------------------------------------------------");
   }
   
+  //find the top marks in total depts methods
   private static void wholeTop(int[] arr1,int[] arr2, int[] arr3) {
 	  
 	  int max1=Integer.MIN_VALUE;
@@ -119,39 +132,71 @@ public class Python_Professor {
 	
 	 System.out.println("----------------------------------------------------------");
   }
+
+  private static void best_avg(int[] array1,int[] array2,int[] array3){
+	double ttlmark1=0;
+	double ttlmark2=0;
+	double ttlmark3=0;
+
+	 for (int i : array1) {
+		ttlmark1+=i;
+	 }
+	 for (int i : array2) {
+		ttlmark2+=i;
+	 }
+	 for (int i : array3) {
+		ttlmark3+=i;
+	 }
+
+	 double avg1=ttlmark1/array1.length;
+	 double avg2=ttlmark2/array2.length;
+	 double avg3=ttlmark3/array3.length;
+
+	 if((avg1 > avg2) && (avg1 > avg3)){
+		System.out.println("Best average mark class is Dept A");
+	 }else if ((avg2 >avg1)&& (avg2>avg3)) {
+		System.out.println("Best average mark class is Dept B");
+	 }else if ((avg3 > avg1) && (avg3 > avg2)) {
+		System.out.println("Best average mark class is Dept C");
+	 }
+
+	  System.out.println("----------------------------------------------------------");
+  }
   
 }
 
 /*Output:
 Enter the number of students in A:
-10
+5
 Enter their marks separated by commas:
-98,87,77,76,65,54,34,21,54,77
+70,56,78,59,80
 ----------------------------------------------------------
 Enter the number of students in B:
-8
+5
 Enter their marks separated by commas:
-76,88,55,23,28,52,90,33
+90,78,88,90,77
 ----------------------------------------------------------
 Enter the number of students in C:
-9
+5
 Enter their marks separated by commas:
-23,77,90,97,26,71,70,50,43
+44,76,88,49,99
 ----------------------------------------------------------
-Dept of A Top marks :98, 87, 77, 
+Dept of A Top marks :80, 78, 70, 
 ----------------------------------------------------------
-Dept of B Top marks :90, 88, 76, 
+Dept of B Top marks :90, 90, 88,
 ----------------------------------------------------------
-Dept of C Top marks :97, 90, 77, 
+Dept of C Top marks :99, 88, 76,
 ----------------------------------------------------------
-Total class Top marks :98, 90, 97
+Total class Top marks :80, 90, 99
 ----------------------------------------------------------
-Average mark of the dept A:64 Passing marks :643
+Average mark of the dept A:68 Passing marks :343
 ----------------------------------------------------------
-Average mark of the dept B:55 Passing marks :445
+Average mark of the dept B:84 Passing marks :423
 ----------------------------------------------------------
-Average mark of the dept C:60 Passing marks :547
+Average mark of the dept C:71 Passing marks :356
 ----------------------------------------------------------
-Average of Total dept Students :60
+Average of Total dept Students :74
+----------------------------------------------------------
+Best average mark class is Dept B
 ----------------------------------------------------------
 */
