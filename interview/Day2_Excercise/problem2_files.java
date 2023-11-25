@@ -14,24 +14,21 @@ public class problem2_files {
         try{
             File fil=new File("F:\\file.txt"); //read a file input
             Scanner reader=new Scanner(fil); //Scan the file
-            //int count=0;
+            int count=0;
             String preword="";
 			String currword=null;
-           // String temp="";
 
             while(reader.hasNext()) //taking the word end of the word till end of the file 
             {
                 currword=reader.next(); // initialize the taking word into currword
                 if(currword.equalsIgnoreCase(preword)) // the currword and preword is equal enter into condition
                 {
-                    int  count =0;
                     count++; // increse the count
-                    System.out.println(currword+" : "+count);
                 }
                 preword = currword; //initialize currword as preword
             } 
             reader.close(); //close the reader
-          //  System.out.println("Count is :"+count); //print the count
+            System.out.println("Count is :"+count); //print the count
 
         }catch(FileNotFoundException e){
             e.printStackTrace();
