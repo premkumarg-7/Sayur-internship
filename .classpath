@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="intern"/>
+	<classpathentry excluding="ExcersiceList3/|Day2_Excercise/|Collatz-conjucture/|Day4_Excercise/|ExcerciseList1/" kind="src" path="interview"/>
+	<classpathentry kind="src" path="interview/Collatz-conjucture"/>
+	<classpathentry kind="src" path="interview/Day2_Excercise"/>
+	<classpathentry kind="src" path="interview/Day4_Excercise"/>
+	<classpathentry kind="src" path="interview/ExcerciseList1"/>
+	<classpathentry kind="src" path="interview/ExcersiceList3"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
