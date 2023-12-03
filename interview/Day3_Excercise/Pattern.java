@@ -29,7 +29,6 @@ public class Pattern
 		ArrayList<Integer> arr2=new ArrayList<>();
 		arr1.add(num);
 		for(int i=0;i<n;i++){ //initialize forloop for rows
-		    
 		    for(int a=n;a>i;a--){		//initialize this loop for spaces
 		        System.out.print(" ");
 		    }
@@ -42,15 +41,12 @@ public class Pattern
 		        for(Integer  val:arr1) {	//print the values from arr1
 		        	System.out.print(val+" ");
 		        }
-		        
 		        System.out.println();
 		       continue; //using jump statement no need to execute below codes
 		    }
-		   
 		    for(int j=0;j<arr1.size()-1;j++){ 
 		        arr2.add(arr1.get(j)+arr1.get(j+1)); //add the values into arr2[j]=(arr1[j]+arr1[j+1])
 		    }
-      
 		     System.out.print(num+" ");
 		     for(Integer val:arr2) {
 		    	 System.out.print(val+" ");
