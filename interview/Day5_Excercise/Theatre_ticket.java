@@ -15,7 +15,7 @@ public class Theatre_ticket {
 			}
 			seatingprint(seat);
 			
-			while(tickets<10) {
+			while(tickets<=10) {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Enter the ticket count :");
 			int count=sc.nextInt();
@@ -51,15 +51,20 @@ public class Theatre_ticket {
 		}
 		
 		private static String seatcheck(int count,int row,int place,String[][] seat) {
+			String s="";
 		for(int i=0;i<count;i++) {
 			if(seat[row-1][place-1].equals("**")) {
 				return "Seat is already booked!";
 			}else {
-				System.out.print(seat[row-1][place-1]+" ");
+				s+=seat[row-1][place-1]+" ";
 				seat[row-1][place-1]="**";
 				place++;
 			}
 		}
-		return "Seat Booked!";
+		System.out.println("---------------------------");
+		System.out.println("\t Your seats are Booked! \n \t Here are the your tickets!");
+		System.out.println("\t "+s);
+		System.out.println("---------------------------");
+		return "Enjoy your cinematic experience!";
 		}
 }

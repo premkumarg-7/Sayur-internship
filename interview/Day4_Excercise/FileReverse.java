@@ -13,8 +13,9 @@ public class FileReverse {
 	public static void main(String[] args) {
 	
 		try {
-			File file=new File("F:/file2.txt"); //get the file using File method
+			File file=new File("C:\\Users\\Prem\\Desktop\\sayur\\Sayur-internship\\interview\\Day3_Excercise\\the _file.txt"); //get the file using File method
 			Scanner reader= new Scanner(file); //read the content in file using scanner method
+			String s="";
 			
 			while(reader.hasNext()) { //file can read end of the file
 				
@@ -24,9 +25,9 @@ public class FileReverse {
 					revword+=str.charAt(i); 
 				}
 				
-				System.out.print(revword+" "); //print the reverse word
+				s+=revword+" "; //print the reverse word
 			}
-			
+			System.out.print(s);
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
