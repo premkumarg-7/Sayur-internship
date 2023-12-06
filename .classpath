@@ -2,11 +2,14 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="intern"/>
-	<classpathentry excluding="ExcersiceList3/|Day2_Excercise/|Collatz-conjucture/|Day4_Excercise/|ExcerciseList1/" kind="src" path="interview"/>
+	<classpathentry excluding="ExcersiceList3/|Day2_Excercise/|Collatz-conjucture/|Day4_Excercise/|ExcerciseList1/|Day5_Excercise/|Day7_Excercise/|Day6_Excercise/" kind="src" path="interview"/>
 	<classpathentry kind="src" path="interview/Collatz-conjucture"/>
 	<classpathentry kind="src" path="interview/Day2_Excercise"/>
 	<classpathentry kind="src" path="interview/Day4_Excercise"/>
 	<classpathentry kind="src" path="interview/ExcerciseList1"/>
 	<classpathentry kind="src" path="interview/ExcersiceList3"/>
+	<classpathentry kind="src" path="interview/Day5_Excercise"/>
+	<classpathentry kind="src" path="interview/Day7_Excercise"/>
+	<classpathentry kind="src" path="interview/Day6_Excercise"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

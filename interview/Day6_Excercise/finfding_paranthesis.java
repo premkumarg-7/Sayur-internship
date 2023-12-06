@@ -1,5 +1,4 @@
 import java.util.Stack;
-
 /*
  * Write a program to check if a given string of parentheses, brackets, and braces is balanced. 
 For instance, "({[]})" is balanced, but "({[)})" is not
@@ -9,10 +8,8 @@ Input ((Abc[i]) or (Abc[2]))
 Output true
 Input ((Abc[i]) or Abc[2)])
 Output False
-
  */
 public class finfding_paranthesis {
-
 	public static void main(String[] args) {
 		
 		String str="((Abc[i]) or (Abc[2]))";
