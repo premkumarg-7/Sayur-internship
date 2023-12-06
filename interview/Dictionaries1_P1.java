@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main
+public class Dictionaries1_P1
 {
 	public static void main(String[] args) {
 		
